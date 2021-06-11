@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const fetchAllCards = (cb) => {
-  fs.readFile("/data/cards.json", "utf8", (err, cards) => {
+  fs.readFile("./data/cards.json", "utf8", (err, cards) => {
     if (err) console.log(err);
     else {
       cb(null, cards);
@@ -10,7 +10,7 @@ const fetchAllCards = (cb) => {
 };
 
 const fetchCard = (cardName, cb) => {
-  fs.readFile("/data/cards.json", "utf8", (err, cards) => {
+  fs.readFile("./data/cards.json", "utf8", (err, cards) => {
     if (err) console.log(err);
     else {
       const cardsObj = JSON.parse(cards);
@@ -21,7 +21,7 @@ const fetchCard = (cardName, cb) => {
 };
 
 const fetchRandomCard = (cb) => {
-  fs.readFile("/data/cards.json", "utf8", (err, cards) => {
+  fs.readFile("./data/cards.json", "utf8", (err, cards) => {
     if (err) console.log(err);
     else {
       const cardsObj = JSON.parse(cards);
